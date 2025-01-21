@@ -1,0 +1,273 @@
+.left {
+  background-color: #181818;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+.camerapage {
+  background-color: #181818;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.right {
+  display: inline-block;
+  background-color: #040406;
+  position: absolute;
+  left: 30%;
+  top: 0%;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  top: -8.5%;
+  left: 50%;
+  width: 60%;
+  color: white;
+  font-size: 300%;
+}
+
+.ze03 {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  top: 2%;
+  left: 5%;
+  height: 20%;
+  width: 35%;
+}
+
+.gps {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  top: -18.3%;
+  left: 45%;
+  height: 20%;
+  width: 49%;
+}
+
+.mq4 {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  width: 15%;
+  top: 4%;
+  left: 3%;
+  height: 20%;
+}
+
+.sgp {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  width: 32%;
+  height: 15%;
+  top: 2%;
+  left: 1%;
+}
+
+.camera {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  left: 53.5%;
+  top: 2%;
+  width: 46%; /*17.2*/
+  height: 36%;
+}
+
+.cameraonly{
+  border: 2px solid #181818;
+  border-radius: 10px;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%; /*17.2*/
+  height: 80%;
+
+}
+
+.camera{
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  left: 53.5%;
+  top: 2%;
+  width: 46%; /*17.2*/
+  height: 36%;
+
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-between;  /* Distributes the space between the images */
+  gap: 1px; /* Optional, adds space between the two images */
+}
+
+.bme {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  left: 30.7%;
+  top: 18%;
+  width: 22.5%;
+  height: 20%;
+}
+
+.spectral {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  width: 46%;
+  height: 40%;
+  top: 39%;
+  left: 53.5%;
+}
+
+.soil {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  width: 22.5%;
+  height: 20.5%;
+  top: 39%;
+  left: 30.7%;
+}
+
+.flu {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  width: 22.5%;
+  height: 18.5%;
+  top: 60.5%;
+  left: 30.7%;
+}
+
+.tsl2591 {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  width: 35%;
+  height: 19%;
+  top: 80%;
+  left: 30.7%;
+}
+.mq135 {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  width: 33.5%;
+  height: 19%;
+  top: 80%;
+  left: 66%;
+}
+
+.switch {
+  background-color: #181818; /* Matches the left panel background */
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  position: fixed;
+  top: 90%; /* Adjust position as needed */
+  left: 5%; /* Adjust position as needed */
+  transition: all 0.3s ease-in-out;
+}
+
+.switch:hover {
+  background-color: white;
+  color: #181818;
+  transform: scale(1.1);
+}
+
+.subheader {
+  color: white;
+  font-size: 150%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.camsubheader {
+  color: white;
+  font-size: 200%;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #181818;
+}
+
+.item {
+  color: white;
+  padding: 20px;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  font-size: 130%;
+}
+
+#one {
+  position: relative;
+  top: 3%;
+  left: 5%;
+  width: 42.5%;
+  height: 5%;
+}
+
+#two {
+  position: relative;
+  top: 3%;
+  left: 10%;
+  width: 42.5%;
+  height: 5%;
+}
+
+#three {
+  position: relative;
+  top: 7%;
+  left: 5%;
+  width: 90%;
+  height: 5%;
+}
+
+#four {
+  position: relative;
+  top: 12%;
+  left: 5%;
+  width: 90%;
+  height: 5%;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.stupid {
+  position: relative;
+  width: 15%;
+  left: 7%;
+  top: -88%;
+  color: white;
+  font-size: xx-large;
+  text-align: left;
+}
+
