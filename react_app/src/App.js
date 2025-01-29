@@ -1,6 +1,5 @@
 import './App.css';
 import { useEffect, useState, useRef } from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import io from 'socket.io-client';
 import Chart from 'chart.js/auto';
 import Image from './components/Image';
@@ -16,22 +15,22 @@ function SensorDashboard() {
   const [view, setView] = useState('dashboard'); // State to toggle views
   const [sensorData, setSensorData] = useState({
     ze03: { co: 0 },
-    gps: { lat: 0, lon: 0, dir: 0 },
-    flurometer: { cur: 0, res: 0 },
-    bme688: { temperature: 0, pressure: 0, humidity: 0, altitude: 0 },
+    gps: { lat: 0, lon: 0},
+    flurometer: { red: 0, green: 0,blue: 0 },
+    bme688: { temperature: 0, pressure: 0, humidity: 0 },
     mq4: { methane: 0 },
     sgp30: { tvoc: 0, co2: 0 },
-    soil_probe: { temperature: 0, moisture: 0, ph_value: 0 },
+    soil_probe: { soil_temperature: 0, soil_moisture: 0},
     as726x: { s1: 0, s2: 0, s3: 0, s4: 0, s5: 0, s6: 0 },
-    tsl2591: { RadiationIntesity: 0 },
-    MQ135: { Benzene: 0, Sulphur: 0, Ammonia: 0 },
+    tsl2591: { RadiationIntensity: 0 },
+    MQ135: { Benzene: 0},
   });
 
   const chartRef = useRef(null); // Reference for the canvas element
   const [sensorChart, setSensorChart] = useState(null);
 
   useEffect(() => {
-    const socket = io.connect('http://localhost:5000');
+    const socket = io.connect("http://192.168.234.121:5000");
     socket.on('connect', () => {
       console.log('Connected to WebSocket server');
     });
@@ -101,12 +100,12 @@ function SensorDashboard() {
             <div className="camsubheader">Camera View</div>
             <div className="video-container">
               <img
-                src="http://localhost:5000/video1"
+                src="http://192.168.234.121:5000/video1"
                 alt="Video 1"
                 style={{ width: '50%', height: '100%' }}
               />
               <img
-                src="http://localhost:5000/video2"
+                src="http://192.168.234.121:5000/video2"
                 alt="Video 2"
                 style={{ width: '50%', height: '100%' }}
               />
@@ -162,12 +161,12 @@ function SensorDashboard() {
             <div className='subheader'>Cameras</div>
             <div className='video-container'>
               <img
-                src='http://localhost:5000/video1'
+                src='http://192.168.234.121:5000/video1'
                 alt='Video 1'
                 style={{ width: '50%', height: '300px' }}
               />
               <img
-                src='http://localhost:5000/video2'
+                src='http://192.168.234.121:5000/video2'
                 alt='Video 2'
                 style={{ width: '50%', height: '300px' }}
               />
@@ -183,13 +182,15 @@ function SensorDashboard() {
           {sensorData.flurometer && (
             <div className="flu">
               <div className="subheader">Flurometer</div>
-              <Sensor id="resistance" name="Resistance" value={sensorData.flurometer.res} unit="Ω" />
+              <Sensor id="red" name="Red" value={sensorData.flurometer.red} unit=" " />
+              <Sensor id="green" name="Green" value={sensorData.flurometer.green} unit=" " />
+              <Sensor id="blue" name="Blue" value={sensorData.flurometer.blue} unit=" " />
             </div>
           )}
 
           <div className="tsl2591">
             <div className="subheader">TSL2591</div>
-            <Sensor id="radiationintensity" name="Radiation Intensity" value={sensorData.tsl2591.RadiationIntesity} unit="lux" />
+            <Sensor id="radiationintensity" name="Radiation Intensity" value={sensorData.tsl2591.RadiationIntensity} unit="lux" />
           </div>
           <div className="mq135">
             <div className="subheader">MQ135</div>

@@ -7,9 +7,8 @@ const Soil = ({ data }) => {
       <div className='subheader'>Soil Probe</div>
       {data.soil_probe && (
         <>
-          <Sensor id='soil-temp' name='Temperature' value={data.soil_probe.temperature} unit='°C' />
-          <Sensor id='soil-moisture' name='Moisture' value={data.soil_probe.moisture} unit='%' />
-          <Sensor id='soil-ph' name='pH Value' value={data.soil_probe.ph_value} unit='' />
+          <Sensor id='soil-temp' name='Soil_Temperature' value={data.soil_probe.soil_temperature} unit='°C' />
+          <Sensor id='soil-moisture' name='Soil_Moisture' value={data.soil_probe.soil_moisture} unit='%' />
         </>
       )}
     </div>
